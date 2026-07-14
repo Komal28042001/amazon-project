@@ -1,10 +1,10 @@
 import fs from 'fs/promises';
 import { v4 as uuidv4 } from 'uuid';
-import orders from './data/orders.json' with { type: 'json' };
+
 
 export async function createOrder(req, res) {
   try {
-    const data = await fs.readFile('./controllers/data/orders.json', 'utf-8');
+    const data = await fs.readFile('./data/orders.json', 'utf-8');
     const orders = JSON.parse(data);
 
     const products = req.body.cart.map((cartItem) => {
@@ -32,7 +32,7 @@ export async function createOrder(req, res) {
     orders.unshift(newOrder);
 
     await fs.writeFile(
-      './controllers/data/orders.json',
+      './data/orders.json',
       JSON.stringify(orders, null, 2)
     );
 
