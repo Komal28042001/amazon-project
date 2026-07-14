@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import { v4 as uuidv4 } from 'uuid';
+import orders from './data/orders.json' with { type: 'json' };
 
 export async function createOrder(req, res) {
   try {
