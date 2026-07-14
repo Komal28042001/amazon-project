@@ -8,7 +8,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
 // Home Route
 app.get('/', (req, res) => {
   res.send('Amazon Backend Running');
