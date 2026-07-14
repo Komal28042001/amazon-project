@@ -105,7 +105,7 @@ class Appliance extends Product{
 export let products = [];
 
 export function loadProductsFetch() {
- const promise = fetch('http://localhost:3000/products').then((response) => {
+ const promise = fetch('https://amazon-project-l3c1.onrender.com/products').then((response) => {
     return response.json()
   }).then((productsData) => {
   products = productsData.map((productDetails) => {

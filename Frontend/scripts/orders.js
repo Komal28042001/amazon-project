@@ -1,11 +1,11 @@
 async function loadOrders() {
   try {
     // Fetch orders
-    const ordersResponse = await fetch('http://localhost:3000/orders');
+    const ordersResponse = await fetch('https://amazon-project-l3c1.onrender.com/orders');
     const orders = await ordersResponse.json();
 
     // Fetch products
-    const productsResponse = await fetch('http://localhost:3000/products');
+    const productsResponse = await fetch('https://amazon-project-l3c1.onrender.com/products');
     const products = await productsResponse.json();
 
     let ordersHTML = '';

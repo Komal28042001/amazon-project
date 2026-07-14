@@ -7,14 +7,14 @@ async function loadTracking() {
   try {
     // Get the selected order
     const response = await fetch(
-      `http://localhost:3000/orders/${orderId}`
+      `https://amazon-project-l3c1.onrender.com/orders/${orderId}`
     );
 
     const order = await response.json();
 
     // Get all products
     const productResponse = await fetch(
-      'http://localhost:3000/products'
+      'https://amazon-project-l3c1.onrender.com/products'
     );
 
     const products = await productResponse.json();
